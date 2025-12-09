@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      
+      <a-assets>
+        <a-mixin id="wood" material="color: #8c7b6c; roughness: 0.9"></a-mixin>
+        <a-mixin id="metal" material="color: #ccc; metalness: 0.6; roughness: 0.2"></a-mixin>
+        <a-mixin id="wall-color" material="color: #d1dce3; roughness: 1"></a-mixin>
+      </a-assets>
+
+      <a-sky color="#f0f4f8"></a-sky> 
+      
+      <a-circle rotation="-90 0 0" radius="15" color="#5d7658"></a-circle>
+      
+      <a-plane position="0 0.001 -3" rotation="-90 0 0" width="4" height="4" color="#4a5f47"></a-plane>
+      
+      <a-cylinder theta-length="60" theta-start="140" radius="9" height="6" side="double" open-ended="true" mixin="wall-color" position="0 0 0"></a-cylinder>
+      <a-cylinder theta-length="60" theta-start="-20" radius="9" height="6" side="double" open-ended="true" mixin="wall-color" position="0 0 0"></a-cylinder>
+      
+      <a-box position="0 2 -8.9" width="4" height="2.25" depth="0.05" color="black"></a-box>
+      <a-box position="0 2 -8.88" width="4.1" height="2.35" depth="0.01" color="#111"></a-box>
+      <a-cylinder position="0 0.88 -8.8" radius="0.05" height="0.6" color="#333"></a-cylinder>
+
+      <a-light type="directional" position="-2 6 4" intensity="0.8"></a-light>
+      <a-light type="ambient" color="#FFF" intensity="0.4"></a-light>
+
+
+      <a-entity position="0 0 -3">
+        
+        <a-circle rotation="-90 0 0" radius="1.8" color="#e0e0e0" position="0 0.02 0"></a-circle>
+
+        <a-cylinder position="0 0.75 0" radius="1" height="0.05" color="#f5f5f5"></a-cylinder>
+        <a-cone position="-0.4 0.375 -0.4" radius-bottom="0.02" radius-top="0.06" height="0.75" mixin="wood"></a-cone>
+        <a-cone position="0.4 0.375 -0.4" radius-bottom="0.02" radius-top="0.06" height="0.75" mixin="wood"></a-cone>
+        <a-cone position="-0.4 0.375 0.4" radius-bottom="0.02" radius-top="0.06" height="0.75" mixin="wood"></a-cone>
+        <a-cone position="0.4 0.375 0.4" radius-bottom="0.02" radius-top="0.06" height="0.75" mixin="wood"></a-cone>
+
+        <a-entity position="-0.3 0.775 0.2">
+             <a-cylinder radius="0.07" height="0.18" color="#007e3a" position="0 0.09 0">
+                 <a-text value="MILO" color="white" align="center" width="1.5" position="0 0 0.071" rotation="0 0 0"></a-text>
+            </a-cylinder>
+            <a-cylinder radius="0.072" height="0.02" mixin="metal" position="0 0.18 0"></a-cylinder>
+            <a-box width="0.01" height="0.2" depth="0.01" color="silver" position="0.05 0.1 0.05" rotation="10 0 45"></a-box>
+        </a-entity>
+
+        <a-entity position="0.4 0.775 -0.2">
+            <a-cylinder radius="0.065" height="0.16" color="#0080ff" metalness="0.3" position="0 0.08 0">
+                 <a-plane width="0.16" height="0.08" color="white" position="0 0 0.066"></a-plane>
+                 <a-text value="IDEAL" color="#0080ff" align="center" width="1.2" position="0 0 0.067"></a-text>
+            </a-cylinder>
+            <a-torus radius="0.065" radius-tubular="0.002" color="silver" rotation="90 0 0" position="0 0.16 0"></a-torus>
+        </a-entity>
+        
+        <a-entity position="0 0.775 0.3">
+            <a-cylinder radius="0.065" height="0.16" color="#eeeeee" metalness="0.3" position="0 0.08 0">
+                 <a-plane width="0.1" height="0.08" color="#ffcc00" position="0 0 0.066"></a-plane>
+                 <a-text value="MILK" color="black" align="center" width="1.2" position="0 0 0.067"></a-text>
+            </a-cylinder>
+            <a-torus radius="0.065" radius-tubular="0.002" color="silver" rotation="90 0 0" position="0 0.16 0"></a-torus>
+        </a-entity>
+
+        <a-entity position="0.4 0.775 0.1">
+            <a-cylinder radius="0.05" height="0.12" color="#333" position="0 0.06 0"></a-cylinder>
+            <a-torus radius="0.03" radius-tubular="0.005" arc="180" color="#333" position="0.05 0.06 0" rotation="0 0 -90"></a-torus>
+             <a-circle radius="0.04" color="#3b2f2f" rotation="-90 0 0" position="0 0.11 0"></a-circle>
+        </a-entity>
+
+        <a-entity position="0.2 0.775 0.4">
+            <a-cylinder radius="0.05" height="0.12" color="#dccbb6" position="0 0.06 0"></a-cylinder>
+            <a-torus radius="0.03" radius-tubular="0.005" arc="180" color="#dccbb6" position="0.05 0.06 0" rotation="0 0 -90"></a-torus>
+             <a-circle radius="0.04" color="#3b2f2f" rotation="-90 0 0" position="0 0.11 0"></a-circle>
+        </a-entity>
+
+      </a-entity> <a-entity position="-1.2 0 -3" rotation="0 70 0">
+        <a-cone position="-0.2 0.22 -0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="0.2 0.22 -0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="-0.2 0.22 0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="0.2 0.22 0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-box position="0 0.45 0" width="0.5" depth="0.5" height="0.04" color="#333"></a-box>
+        <a-box position="-0.23 0.75 0" width="0.04" depth="0.4" height="0.4" color="#333" rotation="0 0 -10"></a-box>
+      </a-entity>
+
+      <a-entity position="1.2 0 -3" rotation="0 -70 0">
+        <a-cone position="-0.2 0.22 -0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="0.2 0.22 -0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="-0.2 0.22 0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-cone position="0.2 0.22 0.2" radius-bottom="0.015" radius-top="0.025" height="0.44" mixin="wood"></a-cone>
+        <a-box position="0 0.45 0" width="0.5" depth="0.5" height="0.04" color="#333"></a-box>
+        <a-box position="0.23 0.75 0" width="0.04" depth="0.4" height="0.4" color="#333" rotation="0 0 10"></a-box>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>

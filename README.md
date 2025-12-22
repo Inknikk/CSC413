@@ -1,4 +1,4 @@
-Scene Readme
+
 This is the A-Frame code for the VR scene. I built everything using basic shapes like boxes and cylinders because we weren't allowed to use imported models.
 
 The table area has a modern, neutral look with tapered legs and dark chairs. I put a Milo tin, an Ideal Milk tin, and a generic Milk tin on the table, along with two simple mugs. I used a darker plane on the floor under the table to make it stand out.
